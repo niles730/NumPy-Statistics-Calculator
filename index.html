@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>NumPy Statistics Calculator</title></head>
+<body>
+<h2>NumPy Statistics Calculator</h2>
+<form method="POST">
+<label>Enter numbers separated by commas:</label><br><br>
+<input type="text" name="numbers" size="50" required>
+<button type="submit">Calculate</button>
+</form>
+
+{% if results %}
+<h3>Results</h3>
+<p>Mean: {{ results.mean }}</p>
+<p>Median: {{ results.median }}</p>
+<p>Standard Deviation: {{ results.std }}</p>
+<p>Variance: {{ results.variance }}</p>
+{% endif %}
+
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+</body>
+</html>
